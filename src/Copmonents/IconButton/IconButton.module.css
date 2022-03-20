@@ -1,0 +1,14 @@
+.icon_button {
+  font-weight: 500;
+  font-size: 1.7rem;
+  line-height: 1.5;
+  border-radius: 0.25rem;
+  transition: all 0.2s linear;
+  padding: 0.2rem;
+}
+.icon_button:hover {
+  background-color: var(--icon-hover);
+}
+.icon_button:focus {
+  box-shadow: 0px 0px 0px 2px var(--icon-focus);
+}

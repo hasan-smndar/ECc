@@ -1,0 +1,30 @@
+.hidden {
+  display: none;
+}
+@media screen and (min-width: 768px) {
+  .links,
+  .cart_login {
+    display: flex;
+    column-gap: 1.5rem;
+  }
+  .bar_button {
+    display: none;
+  }
+  .link {
+    display: block;
+    text-transform: capitalize;
+    font-size: 1.05rem;
+    line-height: 1.5rem;
+    font-weight: 500;
+    letter-spacing: 0.045rem;
+  }
+  .icon {
+    font-size: 1.4rem;
+  }
+  .link_color {
+    color: var(--link-color);
+  }
+  .link_color:hover {
+    color: var(--link-color-hover);
+  }
+}
