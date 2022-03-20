@@ -6,7 +6,7 @@ const App = () => {
     <BrowserRouter>
       <Navigation />
       <Routes>
-        <Route path="home" element={<Home />} />
+        <Route path="/" element={<Home />} />
         <Route path="products" element={<Products />} />
         <Route path="cart" element={<Cart />} />
         <Route path="about" element={<About />} />
