@@ -1,23 +1,29 @@
-import React from "react";
 import Hero from "../../Copmonents/Hero";
-
+import Title from "../../Copmonents/Title";
+import Card from "../../Copmonents/Card";
+import { data } from "./data";
+import Container from "../../Copmonents/Container";
+import style from "./Home.module.css";
 const Home = () => {
   return (
-    <div>
+    <>
       <Hero />
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias
-        accusamus magni odit eligendi omnis. Culpa possimus similique dolorem,
-        deserunt ipsum harum, placeat dolores assumenda deleniti maxime alias
-        doloribus laborum. Beatae. Lorem ipsum dolor sit amet consectetur
-        adipisicing elit. Animi ab dicta similique esse error alias, veritatis,
-        tenetur non, minus voluptatum cumque voluptates voluptate eum nam facere
-        odit quia tempore sunt? Lorem ipsum dolor sit amet consectetur
-        adipisicing elit. Ad rem optio, ipsum expedita suscipit sint accusamus
-        amet libero voluptatem delectus, fugiat atque officia modi? Repudiandae
-        molestiae deleniti asperiores sunt vitae?
-      </p>
-    </div>
+      <Container>
+        <Title>why shopping here</Title>
+        <div className={style.cards}>
+          {data.map((card) => {
+            return (
+              <Card
+                key={card.id}
+                text={card.text}
+                title={card.title}
+                icon={card.icon}
+              />
+            );
+          })}
+        </div>
+      </Container>
+    </>
   );
 };
 

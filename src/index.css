@@ -1,9 +1,10 @@
 :root {
   --icon-hover: rgb(243, 244, 246);
   --icon-focus: rgba(3, 3, 3, 0.7);
-  --link-color-hover: rgb(30, 41, 59);
-  --link-color: rgb(51, 65, 85);
-  --text-color-1: rgb(30, 41, 59);
+  --link-color-hover: rgb(16, 22, 32);
+  --link-color: rgba(16, 22, 32, 0.9);
+  --secondary: rgb(16, 22, 32);
+  --primary: rgb(251, 191, 36);
 }
 *,
 *::before,

@@ -14,16 +14,16 @@
 }
 .container .text h1 {
   color: var(--text-color-1);
-  font-size: calc(1.3vw + 2rem);
+  font-size: calc(1.3vw + 1.9rem);
   font-weight: 600;
 }
 .container .text p {
-  font-size: 1.05rem;
+  font-size: 1rem;
   font-weight: 400;
-  color: var(--text-color-1);
+  color: var(--secondary);
 }
 .container .text h1:first-child {
-  color: rgba(228, 22, 22, 0.801);
+  color: var(--primary);
 }
 @media screen and (min-width: 640px) {
   .container {
