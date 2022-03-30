@@ -1,7 +1,18 @@
-import React from "react";
-
+import Categories from "../../Copmonents/Categories/Categories";
+import { useFilterContext } from "../../context/FilterContext";
+import FilterPrice from "../../Copmonents/FilterPrice";
 const Products = () => {
-  return <div>Products</div>;
+  const { filteredProducts } = useFilterContext();
+
+  return (
+    <div>
+      <Categories className="" />
+      <FilterPrice />
+      {filteredProducts.map((product) => {
+        return <div key={product.id}>{product.name}</div>;
+      })}
+    </div>
+  );
 };
 
 export default Products;

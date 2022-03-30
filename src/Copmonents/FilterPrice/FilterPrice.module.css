@@ -1,0 +1,9 @@
+.container {
+  display: inline-flex;
+  gap: 5px;
+  align-items: center;
+}
+.value {
+  font-weight: 400;
+  font-size: 1.05rem;
+}

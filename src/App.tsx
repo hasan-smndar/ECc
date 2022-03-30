@@ -1,9 +1,10 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import React from "react";
+import { Routes, Route } from "react-router-dom";
 import Navigation from "./Copmonents/Navigation";
 import { Home, About, Cart, Products } from "./Pages";
 const App = () => {
   return (
-    <BrowserRouter>
+    <React.Fragment>
       <Navigation />
       <Routes>
         <Route path="/" element={<Home />} />
@@ -11,7 +12,7 @@ const App = () => {
         <Route path="cart" element={<Cart />} />
         <Route path="about" element={<About />} />
       </Routes>
-    </BrowserRouter>
+    </React.Fragment>
   );
 };
 
