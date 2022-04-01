@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { useFilterContext } from "../../context/FilterContext";
 import style from "./FilterPrice.module.css";
 const FilterPrice = () => {

@@ -31,19 +31,35 @@ export const filterReducer = (state: State, action: Action): State => {
         maxPrice: action.payload,
       };
     }
+    case FilterAction.SET_SORT: {
+      return {
+        ...state,
+        sort: action.payload,
+      };
+    }
     case FilterAction.UPDATE_FILTER: {
-      let filtered = state.products;
+      let filtered = [...state.products];
+      if (state.sort === "low_price") {
+        filtered = filtered.sort((a: Product, b: Product) => {
+          return a.price - b.price;
+        });
+      }
+      if (state.sort === "height_price") {
+        filtered = filtered.sort((a: Product, b: Product) => {
+          return b.price - a.price;
+        });
+      }
       if (state.category !== "all") {
         filtered = filtered.filter((product) => {
           return product.categories.includes(state.category);
         });
       }
+      // Price
       filtered = filtered.filter((product) => {
         return product.price <= state.maxPrice;
       });
       return { ...state, filteredProducts: filtered };
     }
-
     default:
       return state;
   }
