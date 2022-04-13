@@ -8,15 +8,18 @@ const FilterPrice = () => {
   };
   return (
     <div className={style.container}>
-      <input
-        className={style.filter}
-        type="range"
-        min="1"
-        max="500"
-        value={maxPrice}
-        onChange={(e) => handleRange(e)}
-      />
-      <div className={style.value}>{maxPrice}</div>
+      <h2 className={style.title}>Price:</h2>
+      <div className={style.select}>
+        <input
+          className={style.filter}
+          type="range"
+          min="1"
+          max="500"
+          value={maxPrice}
+          onChange={(e) => handleRange(e)}
+        />
+        <div className={style.value}>{maxPrice}</div>
+      </div>
     </div>
   );
 };

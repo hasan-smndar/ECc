@@ -1,0 +1,16 @@
+@media screen and (min-width: 640px) {
+  .list {
+    display: flex;
+    gap: 1rem;
+  }
+  .container {
+    display: flex;
+  }
+}
+.title {
+  font-weight: 600;
+  display: block;
+}
+.list {
+  padding-left: 0.5rem;
+}

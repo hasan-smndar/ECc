@@ -1,8 +1,10 @@
-import React, { useEffect, useState } from "react";
+import clsx from "clsx";
+import { useEffect, useState } from "react";
 import { useFilterContext } from "../../context/FilterContext";
 import { commerce } from "../../lib/commerce";
+import style from "./Categories.module.css";
 type Props = {
-  className: string;
+  className?: string;
 };
 type State = {
   name: string;
@@ -28,20 +30,21 @@ const Categories = ({ className }: Props) => {
   }, []);
 
   return (
-    <div
-      className={className}
-      style={{ padding: "10px", display: "flex", gap: "10px" }}
-    >
-      {categories.map((category) => {
-        return (
-          <button
-            key={category.slug}
-            onClick={() => updateCategory(category.slug)}
-          >
-            {category.name}
-          </button>
-        );
-      })}
+    <div className={clsx(className, style.container)}>
+      <h4 className={style.title}>Categories:</h4>
+      <div className={style.list}>
+        {categories.map((category) => {
+          return (
+            <button
+              style={{ display: "block" }}
+              key={category.slug}
+              onClick={() => updateCategory(category.slug)}
+            >
+              {category.name}
+            </button>
+          );
+        })}
+      </div>
     </div>
   );
 };

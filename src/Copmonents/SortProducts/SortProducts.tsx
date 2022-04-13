@@ -1,5 +1,6 @@
 import React from "react";
 import { useFilterContext } from "../../context/FilterContext";
+import style from "./SortProducts.module.css";
 const option = [
   {
     id: 1,
@@ -23,7 +24,8 @@ const SortProducts = () => {
     updateSort(e.target.value);
   };
   return (
-    <div>
+    <div className={style.container}>
+      <h2 className={style.title}>sort by:</h2>
       <select
         name="sort"
         id="sort"
